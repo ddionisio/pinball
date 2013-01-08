@@ -1,0 +1,63 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Graphics - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/Script1.res" /d "NDEBUG" "C:\lab\pinball\Graphics\Script1.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP43.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /Fp"Release/Graphics.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\lab\pinball\Graphics\CS230bitmap.cpp"
+"C:\lab\pinball\Graphics\CS230compositebitmap.cpp"
+"C:\lab\pinball\Graphics\CS230debugging.cpp"
+"C:\lab\pinball\Graphics\CS230ditherbitmap.cpp"
+"C:\lab\pinball\Graphics\CS230filefunctions.cpp"
+"C:\lab\pinball\Graphics\CS230loadbitmap.cpp"
+"C:\lab\pinball\Graphics\CS230loadbmp.cpp"
+"C:\lab\pinball\Graphics\CS230loadpcx.cpp"
+"C:\lab\pinball\Graphics\CS230miscellaneous.cpp"
+"C:\lab\pinball\Graphics\CS230pattern.cpp"
+"C:\lab\pinball\Graphics\CS230quantize.cpp"
+"C:\lab\pinball\Graphics\CS230savebmp.cpp"
+"C:\lab\pinball\Graphics\CS230scalebitmap.cpp"
+"C:\lab\pinball\Graphics\ddrawmanip.cpp"
+"C:\lab\pinball\Graphics\gdi.cpp"
+"C:\lab\pinball\Graphics\primitive.cpp"
+"C:\lab\pinball\Graphics\specialFX.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP43.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP44.tmp" with contents
+[
+/nologo /out:"Release\Graphics.lib" 
+.\Release\CS230bitmap.obj
+.\Release\CS230compositebitmap.obj
+.\Release\CS230debugging.obj
+.\Release\CS230ditherbitmap.obj
+.\Release\CS230filefunctions.obj
+.\Release\CS230loadbitmap.obj
+.\Release\CS230loadbmp.obj
+.\Release\CS230loadpcx.obj
+.\Release\CS230miscellaneous.obj
+.\Release\CS230pattern.obj
+.\Release\CS230quantize.obj
+.\Release\CS230savebmp.obj
+.\Release\CS230scalebitmap.obj
+.\Release\ddrawmanip.obj
+.\Release\gdi.obj
+.\Release\primitive.obj
+.\Release\specialFX.obj
+.\Release\Script1.res
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP44.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+CS230bitmap.cpp
+cl.exe terminated at user request.
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,18 @@
+START
+[BACKGROUND]
+Path=backgrounds\digipen.bmp
+[CIRCLE]
+NumberOfCircles=2
+SizeType=0
+imgPath=balls\face.bmp
+location x=150 y=100
+speed x=2.5 y=3.5
+gravity=0.030
+SizeType=0
+imgPath=balls\face.bmp
+location x=450 y=100
+speed x=-2.5 y=3.5
+gravity=0.030
+[POLYGON]
+NumberOfPolygon=0
+END

@@ -1,0 +1,29 @@
+START
+[BACKGROUND]
+Path=backgrounds\winnt256.bmp
+[CIRCLE]
+NumberOfCircles=2
+SizeType=1
+imgPath=balls\eye.bmp
+location x=100 y=300
+speed x=2.5 y=-2.5
+gravity=0.020
+SizeType=1
+imgPath=balls\eye.bmp
+location x=500 y=300
+speed x=-2.5 y=-2.5
+gravity=0.020
+[POLYGON]
+NumberOfPolygon=1
+NumPts=9
+r=150 g=200 b=50
+location x=290 y=150
+location x=255 y=185
+location x=210 y=185
+location x=190 y=235
+location x=315 y=250
+location x=440 y=235
+location x=420 y=185
+location x=375 y=185
+location x=340 y=150
+END

@@ -1,0 +1,33 @@
+START
+[BACKGROUND]
+Path=backgrounds\lawnorder.bmp
+[CIRCLE]
+NumberOfCircles=3
+SizeType=1
+imgPath=balls\green.bmp
+location x=80 y=80
+speed x=1.5 y=3.5
+gravity=0.040
+SizeType=1
+imgPath=balls\green.bmp
+location x=525 y=80
+speed x=-2.5 y=3.5
+gravity=0.040
+SizeType=1
+imgPath=balls\strip.bmp
+location x=300 y=140
+speed x=-2.5 y=-2.5
+gravity=0.020
+[POLYGON]
+NumberOfPolygon=2
+NumPts=3
+r=50 g=50 b=255
+location x=100 y=200
+location x=100 y=250
+location x=250 y=250
+NumPts=3
+r=50 g=50 b=255
+location x=500 y=200
+location x=350 y=250
+location x=500 y=250
+END

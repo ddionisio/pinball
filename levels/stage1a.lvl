@@ -1,0 +1,33 @@
+START
+[BACKGROUND]
+Path=backgrounds\mrgorn.bmp
+[CIRCLE]
+NumberOfCircles=3
+SizeType=2
+imgPath=balls\strip.bmp
+location x=48 y=48
+speed x=3.0 y=3.5
+gravity=0.060
+SizeType=2
+imgPath=balls\strip.bmp
+location x=100 y=48
+speed x=3.0 y=3.5
+gravity=0.060
+SizeType=2
+imgPath=balls\strip.bmp
+location x=150 y=48
+speed x=3.0 y=3.5
+gravity=0.060
+[POLYGON]
+NumberOfPolygon=2
+NumPts=3
+r=255 g=0 b=0
+location x=32 y=80
+location x=32 y=200
+location x=200 y=100
+NumPts=3
+r=255 g=0 b=0
+location x=475 y=200
+location x=608 y=300
+location x=608 y=200
+END

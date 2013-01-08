@@ -1,0 +1,132 @@
+  ++++++++++++++++
+      + File manager +
+      ++++++++++++++++
+
+		> Primary
+
+			====================================
+			= FILEHEAD, PFILEHEAD, _FILEHEAD * =
+			====================================
+			
+* This structure contains information pertinent to the entire file management implementation
+
+		  - ActiveFile:        (PFILENODE) ; File currently being processed
+		  - Files:               <_LIST *> ; List of open files
+		  - Filter:     (char [PATH_SIZE]) ; Filter for use in finding files
+		  - Context:        (FILE_CONTEXT) ; File context used internally by file manager
+
+			====================================
+			= FILENODE, PFILENODE, _FILENODE * =
+			====================================
+
+* This structure is used to compose the file manager
+
+		  - File:           (FILE_CONTEXT) ; Handle to an open file
+		  - Mapping:             (CONTEXT) ; Handle to file mapping
+		  - IO_Context:           (void *) ; Context through which file I/O occurs
+		  - Path:       (char [PATH_SIZE]) ; Path of file
+		  - Status:                (FLAGS) ; Indicates status of file
+
+
+
+
+
+
+
+> File manager
+
+			===================================
+			= Initialization/Deinitialization =
+			===================================
+
+* This utility is used to initialize and deinitialize the file manager tool
+
+			///////////////////////////////////////////////////
+			/ PROTECTED RETCODE FileInit (PFILEHEAD fileHead) /
+			///////////////////////////////////////////////////
+
+			  - Purpose:    Initializes a file manager
+			  - Input:      File head pointer to initialize through
+			  - Return:     A code indicating the results of the initialization    
+
+			///////////////////////////////////////////////////
+			/ PROTECTED RETCODE FileTerm (PFILEHEAD fileHead) /
+			///////////////////////////////////////////////////
+
+			  - Purpose:    Deinitializes a file manager
+			  - Input:      File head pointer to deinitialize through
+			  - Return:     A code indicating the results of the termination
+
+
+			========================
+			= File opening/closing =
+			========================
+
+* This utility is used to determine how information is inserted to and extracted from a file
+
+			////////////////////////////////////////////////////////////////////////////////
+/ PUBLIC FILEDATUM FileOpenFile (PFILEHEAD fileHead, char * path, FLAGS flags) /
+////////////////////////////////////////////////////////////////////////////////
+
+	  - Purpose:    Opens a file
+	  - Input:      File head pointer to open file with, path of file, and file opening flags
+	  - Return:     File datum indicating private file information
+
+			////////////////////////////////////////////////////////////////////
+			/ PUBLIC BOOL FileIsOpen (PFILEHEAD fileHead, FILEDATUM fileDatum) /
+			////////////////////////////////////////////////////////////////////
+
+			  - Purpose:    Used to indicate whether a file is open
+			  - Input:      File head pointer to check through, and a file datum
+			  - Return:     A boolean indicating whether file is open
+
+			//////////////////////////////////////////////////////////////////////////
+/ PUBLIC RETCODE FileCloseFile (PFILEHEAD fileHead, FILEDATUM fileDatum) /
+//////////////////////////////////////////////////////////////////////////
+
+			  - Purpose:    Closes a file
+			  - Input:      File head pointer to close file with, and a file datum
+			  - Return:     A code indicating the results of the closure
+
+
+			============
+			= File I/O =
+			============
+
+			* This utility is used to read and write data among files
+
+			/////////////////////////////////////////////////////////////////////////////////////////////////			/ PUBLIC RETCODE FileReadChunk (PFILEHEAD fileHead, void * data, long size, FILEDATUM fileDatum) 			/////////////////////////////////////////////////////////////////////////////////////////////////
+
+- Purpose:    Reads a chunk of data from a file
+- Input:      File head pointer to read with, context to read into, chunk size, and a file datum
+- Return:     A code indicating the results of the read operation
+
+			/////////////////////////////////////////////////////////////////////////////////////////////////		/ PUBLIC RETCODE FileWriteChunk (PFILEHEAD fileHead, void * data, long size, FILEDATUM fileDatum) 		/////////////////////////////////////////////////////////////////////////////////////////////////
+
+- Purpose:    Writes a chunk of data to a file
+- Input:      File head pointer to write with, context to write into, chunk size, and a file datum
+- Return:     A code indicating the results of the write operation
+
+
+			=================
+			= File location =
+			=================
+
+			* This utility is used to search for files
+
+			/////////////////////////////////////////////////////////////////////////////////
+/ PUBLIC RETCODE FileFindFile (PFILEHEAD fileHead, char * filter, FLAGS flags) /
+////////////////////////////////////////////////////////////////////////////////
+
+ - Purpose:    Used to find a file
+ - Input:      File head pointer to search with, filter for use in search, and search flags
+ - Return:     A code indicating the results of the search
+
+
+		       ////////////////////////////////////////////////////////////////////////
+		       / PUBLIC FILEDATUM FileOpenFoundFile (PFILEHEAD fileHead, FLAGS flags) /
+		       ////////////////////////////////////////////////////////////////////////
+
+	  - Purpose:    Opens a file found by a search
+	  - Input:      File head pointer to open file with, and file opening flags
+	  - Return:     File datum indicating private file information

@@ -1,0 +1,27 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MyInput - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "c:\windows\TEMP\RSP1392.TMP" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /Fp"Debug/MyInput.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Lab\Cs200\Pinball\MyInput\input.cpp"
+]
+Creating command line "cl.exe @c:\windows\TEMP\RSP1392.TMP" 
+Creating command line "link.exe -lib /nologo /out:"Debug\MyInput.lib"  .\Debug\input.obj "
+<h3>Output Window</h3>
+Compiling...
+input.cpp
+Creating library...
+
+
+
+<h3>Results</h3>
+MyInput.lib - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
